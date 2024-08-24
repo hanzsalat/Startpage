@@ -65,11 +65,19 @@ a:hover {
 #logo {
 	display: flex;
 	margin: 0 auto;
-	min-height: 80px;
+	height: 100%;
 	text-alaign: center;
 	justify-content: center;
 	color: red;
 	font-size: 40px;
+}
+
+#time {
+	margin-bottom: 0;
+}
+
+#date {
+	margin-top: 0; 
 }
 
 #weather {
