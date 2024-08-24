@@ -7,6 +7,7 @@
 
 * {
 	color: var(--text);
+	font-family: none;
 	font-size: 24px;
 	background-color: var(--bg);
 }
@@ -23,7 +24,9 @@ body {
 input {
 	border: none;
 	font-family: none;
-} :focus {
+}
+
+input:focus {
 	outline: none;
 }
 
@@ -78,14 +81,15 @@ img {
 }
 
 #date {
-	margin-top: 0; 
+	margin-top: 0;
 }
 
 #weather {
 	min-height: 120px;
 }
 
-#poem, #author {
+#poem,
+#author {
 	display: flex;
 	margin: 0 auto;
 	min-height: 50px;
