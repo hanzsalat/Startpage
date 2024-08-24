@@ -1,0 +1,90 @@
+/* base */
+:root {
+	--text: #444444;
+	--bg: #eeeeee;
+	--fade: #d70087;
+}
+
+* {
+	color: var(--text);
+	font-size: 24px;
+	font-family: monospace;
+	background-color: var(--bg);
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	alaign-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 25% 0;
+}
+
+input {
+	border: none;
+} :focus {
+	outline: none;
+}
+
+ul {
+	list-style: square;
+}
+
+a {
+	color: var(--text);
+}
+
+a:hover {
+	color: var(--fade)
+}
+
+/* grid */
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0;
+}
+
+.column {
+	flex: 1;
+	padding: 10px;
+}
+
+/* deviders */
+.box {
+	border: 2px solid var(--bg);
+}
+
+.underline {
+	border-bottom: 2px solid var(--text);
+}
+
+/* other */
+#logo {
+	display: flex;
+	margin: 0 auto;
+	min-height: 80px;
+	text-alaign: center;
+	justify-content: center;
+	color: red;
+	font-size: 40px;
+}
+
+#weather {
+	min-height: 120px;
+}
+
+#poem, #author {
+	display: flex;
+	margin: 0 auto;
+	min-height: 50px;
+	text-align: center;
+	justify-content: center;
+}
+
+.search {
+	width: 100%;
+	margin: 0 10px;
+}

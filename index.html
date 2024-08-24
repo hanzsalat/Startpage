@@ -5,7 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>new tab</title>
+  <script src="time.js"></script>
+  <script src="weather.js"></script>
+  <script src="poems.js"></script>
+  <title>New Tab</title>
 </head>
 <body>
   <!-- search bar -->
@@ -15,6 +18,42 @@
         <input type="text" name="q" placeholder="Search..." />
       </form>
     </div>
+  </div>
+
+  <!-- middle section -->
+  <div class="row">
+    <!-- time and weather -->
+    <div class="column">
+      <div>
+        <p id="time"></p>
+        <p id="date"></p>
+      </div>
+      <hr>
+      <p id="weather"></p>
+    </div>
+    <!-- logo -->
+    <div class="column">
+      <div id="logo" class="box">WIP</div>
+    </div>
+    <!-- links -->
+    <div class="column">
+      <ul>
+        <li><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="https://hub.sp-tarkov.com/files/">SPT</a></li>
+        <li><a href="https://proxmox.home.local/">Proxmox</a></li>
+        <li><a href="http://npm.home.local/">Nginx Proxy Manager</a></li>
+        <li><a href="http://dns.home.local/">Piehole</a></li>
+        <li><a href="http://crafty.home.local/">Crafty Interface</a></li>
+        <li><a href="https://playit.gg/account/agents">Playit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- quote section -->
+  <div class="row">
+    <div id="poem" class="row"></div>
+    <div id="author" class="row"></div>
   </div>
 </body>
 </html>
