@@ -1,5 +1,5 @@
 // only needed https://open-meteo.com/en/docs#
-// TODO: Add extra reports like Sunset and Sunrise of Today
+// TODO: Add extra reports like sunset of today and more
 document.addEventListener('DOMContentLoaded', () => {
 	const lat = 52.5244
 	const long = 13.4105
