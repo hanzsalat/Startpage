@@ -1,5 +1,5 @@
 // only needed https://open-meteo.com/en/docs#
-// TODO: Sunset/rise , cloud coverage
+// TODO: cloud coverage ?
 document.addEventListener("DOMContentLoaded", () => {
 	const weatherElement = document.querySelector("#weather")
 
@@ -23,6 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const updateWeather = (url, weatherElement) => {
+	function convert24to12(time) {
+		var hours = time.split(':')[0]
+		var minutes = time.split(':')[1]
+		var part = hours >= 12 ? 'PM' : 'AM'
+
+		hours = hours % 12
+
+		hours = hours ? hours : 12
+
+		return hours + ':' + minutes + ' ' + part
+	}
+
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
@@ -108,10 +120,14 @@ const updateWeather = (url, weatherElement) => {
 			temperature = data.current.temperature_2m + data.current_units.temperature_2m
 			apparent_temperature = data.current.apparent_temperature + data.current_units.apparent_temperature
 			temperatureText = `(${apparent_temperature})`
+			// sunset/rise
+			sunset = convert24to12(data.daily.sunset[0].split('T')[1])
+			sunrise = convert24to12(data.daily.sunrise[0].split('T')[1])
+			sunText = `the sun is rising at ${sunrise} and setting at ${sunset}`
 			// push weatherInfo to element
-			const weatherInfo = `${weatherText} ${temperatureText}, ${windText}, ${humidityText} and ${downfallText}.`
+			const weatherInfo = `${weatherText} ${temperatureText}, ${windText}, ${humidityText}, ${downfallText}, ${sunText}.`
 			weatherElement.textContent = weatherInfo
-			//console.log(data)
+			console.log(data)
 		})
 		.catch(error => {
 			weatherElement.textContent = "look out the window dawg :)"
