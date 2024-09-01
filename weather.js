@@ -127,7 +127,7 @@ const updateWeather = (url, weatherElement) => {
 			// push weatherInfo to element
 			const weatherInfo = `${weatherText} ${temperatureText}, ${windText}, ${humidityText}, ${downfallText}, ${sunText}.`
 			weatherElement.textContent = weatherInfo
-			console.log(data)
+			//console.log(data)
 		})
 		.catch(error => {
 			weatherElement.textContent = "look out the window dawg :)"
