@@ -14,11 +14,11 @@
 
 body {
 	display: flex;
-	height: 100vh;
-	alaign-items: center;
+	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0 25% 0;
+	margin: auto;
+	padding: 3% 25%;
 }
 
 input {
@@ -73,8 +73,8 @@ img {
 
 /* other */
 #logo {
-	width: 500px;
-	height: 500px;
+	width: 450px;
+	height: 450px;
 	border: 2px solid var(--text)
 }
 
@@ -86,10 +86,6 @@ img {
 	margin-top: 0;
 }
 
-#weather {
-	min-height: 120px;
-}
-
 #poem,
 #author {
 	display: flex;
@@ -97,9 +93,25 @@ img {
 	min-height: 50px;
 	text-align: center;
 	justify-content: center;
+	& p {
+		margin: auto;
+	}
+	& em {
+		margin: auto;
+	}
+}
+
+#links {
+	display: grid;
+	align-items: center;
+	margin: auto;
+}
+
+#weather {
+	margin: auto;
 }
 
 .search {
-	width: 100%;
+	width: 99%;
 	margin: 0 10px;
 }

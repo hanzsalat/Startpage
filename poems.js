@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			const randomIndex = Math.floor(Math.random() * data.length);
 			const poemResult = data[randomIndex];
 
-			poem.innerHTML = `<em><br>${poemResult.lines.join("<br>")}<em>`;
-			author.innerHTML = `<p> - ${poemResult.author} (${poemResult.title})<p>`;
+			poem.innerHTML = `<em>${poemResult.lines.join("<br>")}</em>`;
+			author.innerHTML = `<p> - ${poemResult.author} (${poemResult.title})</p>`;
 		})
 		.catch(error => console.error(error));
 });
